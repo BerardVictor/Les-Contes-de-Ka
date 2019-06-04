@@ -215,16 +215,17 @@ screen choice(items):
     if choice_menu == "tarot" :
         vpgrid:
             xalign 0.5
-            yalign 1.0
+            yalign 0.7
             cols 3
             rows 2
+            xspacing 200
 
             for i in items:
                 imagebutton :
                     action i.action
                     style "tarot_choice_image"
-                    idle "gui/button/tarot_choice_idle_chasseuse_space.png"
-                    hover "gui/button/tarot_choice_hover_chasseuse_space.png"
+                    idle "gui/button/tarot_choice_idle_chasseuse.png"
+                    hover "gui/button/tarot_choice_hover_chasseuse.png"
 
             for i in items:
                 textbutton i.caption action i.action :
@@ -265,11 +266,9 @@ style choice_button_text is default:
 
 style tarot_choice_image :
     xsize None
-    xspacing 200
 
 style tarot_choice_text :
-    xsize 500
-
+    xsize None
 
 
 

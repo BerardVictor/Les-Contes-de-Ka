@@ -226,17 +226,6 @@ define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 
 
-define gui.tarot_choice_button_width = None
-define gui.tarot_choice_button_height = None
-define gui.tarot_choice_button_tile = False
-define gui.tarot_choice_button_borders = Borders(150, 8, 150, 8)
-define gui.tarot_choice_button_text_font = gui.text_font
-define gui.tarot_choice_button_text_size = gui.text_size
-define gui.tarot_choice_button_text_xalign = 0.5
-define gui.tarot_choice_button_text_idle_color = "#cccccc"
-define gui.tarot_choice_button_text_hover_color = "#ffffff"
-define gui.tarot_choice_button_text_insensitive_color = "#444444"
-
 ## Boutons des emplacements de fichiers. #######################################
 ##
 ## Un bouton d’emplacement de fichier est un type spécial de bouton. Il contient
