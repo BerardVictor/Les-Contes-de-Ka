@@ -1,0 +1,68 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+After initialization, but before game start.
+  File "game/screens.rpy", line 212, in prepare_screen
+    screen choice(items):
+  File "game/screens.rpy", line 212, in prepare
+    screen choice(items):
+  File "game/screens.rpy", line 215, in prepare
+    if choice_menu == "tarot" :
+  File "game/screens.rpy", line 215, in prepare
+    if choice_menu == "tarot" :
+  File "game/screens.rpy", line 216, in prepare
+    vpgrid:
+  File "game/screens.rpy", line 216, in prepare
+    vpgrid:
+  File "game/screens.rpy", line 221, in prepare
+    for i in items:
+  File "game/screens.rpy", line 221, in prepare
+    for i in items:
+  File "game/screens.rpy", line 222, in prepare
+    imagebutton :
+  File "game/screens.rpy", line 222, in prepare
+    imagebutton :
+SyntaxError: invalid syntax (game/screens.rpy, line 225)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\bootstrap.py", line 313, in bootstrap
+    renpy.main.main()
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\main.py", line 525, in main
+    run(restart)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\main.py", line 90, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 909, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 212, in prepare_screen
+    screen choice(items):
+  File "game/screens.rpy", line 212, in prepare
+    screen choice(items):
+  File "game/screens.rpy", line 215, in prepare
+    if choice_menu == "tarot" :
+  File "game/screens.rpy", line 215, in prepare
+    if choice_menu == "tarot" :
+  File "game/screens.rpy", line 216, in prepare
+    vpgrid:
+  File "game/screens.rpy", line 216, in prepare
+    vpgrid:
+  File "game/screens.rpy", line 221, in prepare
+    for i in items:
+  File "game/screens.rpy", line 221, in prepare
+    for i in items:
+  File "game/screens.rpy", line 222, in prepare
+    imagebutton :
+  File "game/screens.rpy", line 222, in prepare
+    imagebutton :
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\pyanalysis.py", line 700, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\pyanalysis.py", line 684, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 690, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/screens.rpy, line 225)
+
+Windows-8-6.2.9200
+Ren'Py 7.2.2.491
+Les Contes de Ka : l'Ére des Zémis Version 0.1
+Tue Jun 04 09:43:55 2019
