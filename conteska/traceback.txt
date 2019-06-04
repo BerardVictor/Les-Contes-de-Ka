@@ -1,68 +1,72 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 212, in prepare_screen
+While running game code:
+  File "game/scriptintro.rpy", line 35, in script
+    menu :
+  File "game/screens.rpy", line 212, in execute
     screen choice(items):
-  File "game/screens.rpy", line 212, in prepare
+  File "game/screens.rpy", line 212, in execute
     screen choice(items):
-  File "game/screens.rpy", line 215, in prepare
+  File "game/screens.rpy", line 215, in execute
     if choice_menu == "tarot" :
-  File "game/screens.rpy", line 215, in prepare
-    if choice_menu == "tarot" :
-  File "game/screens.rpy", line 216, in prepare
+  File "game/screens.rpy", line 216, in execute
     vpgrid:
-  File "game/screens.rpy", line 216, in prepare
-    vpgrid:
-  File "game/screens.rpy", line 221, in prepare
+  File "game/screens.rpy", line 230, in execute
     for i in items:
-  File "game/screens.rpy", line 221, in prepare
-    for i in items:
-  File "game/screens.rpy", line 222, in prepare
+  File "game/screens.rpy", line 232, in execute
     imagebutton :
-  File "game/screens.rpy", line 222, in prepare
-    imagebutton :
-SyntaxError: invalid syntax (game/screens.rpy, line 225)
+Exception: Imagebutton does not have a idle image.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\bootstrap.py", line 313, in bootstrap
-    renpy.main.main()
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\main.py", line 525, in main
-    run(restart)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\main.py", line 90, in run
-    renpy.display.screen.prepare_screens()
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 909, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 212, in prepare_screen
+  File "game/scriptintro.rpy", line 35, in script
+    menu :
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 1609, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\exports.py", line 977, in menu
+    rv = renpy.store.menu(new_items)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\exports.py", line 1203, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 2690, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 3074, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 424, in visit_all
+    callback(self)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 3074, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 434, in per_interact
+    self.update()
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 619, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 212, in execute
     screen choice(items):
-  File "game/screens.rpy", line 212, in prepare
+  File "game/screens.rpy", line 212, in execute
     screen choice(items):
-  File "game/screens.rpy", line 215, in prepare
+  File "game/screens.rpy", line 215, in execute
     if choice_menu == "tarot" :
-  File "game/screens.rpy", line 215, in prepare
-    if choice_menu == "tarot" :
-  File "game/screens.rpy", line 216, in prepare
+  File "game/screens.rpy", line 216, in execute
     vpgrid:
-  File "game/screens.rpy", line 216, in prepare
-    vpgrid:
-  File "game/screens.rpy", line 221, in prepare
+  File "game/screens.rpy", line 230, in execute
     for i in items:
-  File "game/screens.rpy", line 221, in prepare
-    for i in items:
-  File "game/screens.rpy", line 222, in prepare
+  File "game/screens.rpy", line 232, in execute
     imagebutton :
-  File "game/screens.rpy", line 222, in prepare
-    imagebutton :
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\pyanalysis.py", line 700, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\pyanalysis.py", line 684, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 690, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/screens.rpy, line 225)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ui.py", line 937, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ui.py", line 933, in choice
+    raise Exception("Imagebutton does not have a %s image." % (name, ))
+Exception: Imagebutton does not have a idle image.
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
 Les Contes de Ka : l'Ére des Zémis Version 0.1
-Tue Jun 04 09:43:55 2019
+Tue Jun 04 10:23:57 2019
