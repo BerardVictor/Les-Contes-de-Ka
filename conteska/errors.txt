@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 231: textbutton expects a non-empty block.
-    textbutton i.caption action i.action :
-                                          ^
+File "game/screens.rpy", line 222: u'text_xalign' is not a keyword argument or valid child for the vpgrid statement.
+    text_xalign 0.5
+               ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Jun 04 10:45:57 2019
+Tue Jun 04 17:19:11 2019

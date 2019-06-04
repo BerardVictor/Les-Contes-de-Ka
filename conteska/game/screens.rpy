@@ -217,8 +217,8 @@ screen choice(items):
             xalign 0.5
             yalign 0.7
             cols 3
-            rows 2
             xspacing 200
+
 
             for i in items:
                 imagebutton :
