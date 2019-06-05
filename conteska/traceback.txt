@@ -1,40 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 203, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 450, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 450, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 460, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/screens.rpy", line 1222, in script
+    init python :
+  File "game/screens.rpy", line 1223, in <module>
+    def fxeduc(p_soutien):
+NameError: name 'fxeduc' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 203, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 450, in script
-    python hide:
+  File "game/screens.rpy", line 1222, in script
+    init python :
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 450, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 460, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\loadsave.py", line 753, in load
-    log.unfreeze(roots, label="_after_load")
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1885, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1713, in rollback
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/screens.rpy", line 1223, in <module>
+    def fxeduc(p_soutien):
+NameError: name 'fxeduc' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
-Les Contes de Ka : l'Ére des Zémis Version 0.1
-Wed Jun 05 09:02:07 2019
+ 
+Wed Jun 05 16:14:12 2019

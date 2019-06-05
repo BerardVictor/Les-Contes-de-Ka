@@ -3,8 +3,9 @@ define r = Character('Rhana', color="#fefefe")
 
 default rel_Rhana = 0
 default rel_Lua = 0
-default p_soutien = 0
-default p_controle = 0
+define p_soutien = 0
+define p_controle = 0
+
 
 default saoul = 0
 default faille1 = 0
