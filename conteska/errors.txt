@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 222: u'text_xalign' is not a keyword argument or valid child for the vpgrid statement.
-    text_xalign 0.5
-               ^
+File "game/screens.rpy", line 1231: u'background' is not a keyword argument or valid child for the screen statement.
+    background "images/bg_menu.png"
+              ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Jun 04 17:19:11 2019
+Wed Jun 05 08:40:18 2019

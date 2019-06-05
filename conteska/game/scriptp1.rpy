@@ -3,6 +3,8 @@ define r = Character('Rhana', color="#fefefe")
 
 default rel_Rhana = 0
 default rel_Lua = 0
+default p_soutien = 0
+default p_controle = 0
 
 default saoul = 0
 default faille1 = 0
@@ -22,10 +24,10 @@ label p1 :
 
         r "Tu as encore fait un cauchemar, Maman ?"
         "Laisse-moi tranquille, Rhana." :
-            $ paix -=1
+            $ p_soutien -=1
             "*Il baisse la tête et s'écarte.*"
         "Ça va aller, Rhana. J'ai l'habitude maintenant.":
-            $ paix +=1
+            $ p_soutien +=1
             "*Vous essayez de sourire.*"
     hide rhana with moveoutright
     hide makaoka with moveoutleft
@@ -69,17 +71,17 @@ label p1 :
                 xalign 0.0 yalign 0.425
             with moveinleft
             m "Je suis désolée, Rhana. Je suis un peu à cran en ce moment."
-            $ paix += 2
+            $ p_soutien += 2
             "Il vous sourit timidement."
             hide makaoka with moveoutleft
 
         "Tu devrais t'endurcir Rhana !" :
-            $ coeur -= 1
+            $ p_controle += 1
             "Les sanglots s'atténuent lentement."
 
         "Ne rien dire" :
-            $ paix -= 2
-            $ coeur -= 1
+            $ p_soutien -= 2
+            $ p_controle -= 1
     "Plus tard, les sensations de votre cauchemar commencent lentement à se dissiper."
     if saoul >= 1 :
         "Contrairement à votre gueule de bois"

@@ -303,14 +303,17 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Retour") action Rollback()
+#            textbutton _("Retour") action Rollback()
             textbutton _("Historique") action ShowMenu('history')
-            textbutton _("Avance rapide") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
+#            textbutton _("Avance rapide") action Skip() alternate Skip(fast=True, confirm=True)
+#            textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Sauvegarde") action ShowMenu('save')
-            textbutton _("Sauvegarde R.") action QuickSave()
-            textbutton _("Chargement R.") action QuickLoad()
+#            textbutton _("Sauvegarde R.") action QuickSave()
+#            textbutton _("Chargement R.") action QuickLoad()
             textbutton _("Paramètres") action ShowMenu('preferences')
+            textbutton _("          ")
+            textbutton _("Profil") action ShowMenu('profil')
+
 
 
 ## Ce code garantit que le menu d’accès rapide sera affiché dans le jeu, tant
@@ -1206,6 +1209,70 @@ style help_label_text:
     size gui.text_size
     xalign 1.0
     text_align 1.0
+
+
+## Écran de profil ################################################################
+##
+## Cet écran fournit des informations sur les statistiques, l'humeur, le zémi de Makaoka
+## Il affiche également l'éducation de Rhana
+## Il n'est disponible qu'en jeu
+
+screen profil :
+    tag menu
+    style_prefix "profil"
+
+#    vpgrid :
+#        xalign 0.5
+#        yalign 0.5
+#        cols 3
+#        rows 3
+#
+#        textbutton
+    image "images/bg_menu.png"
+    vbox :
+        style "profil_comp"
+        text _("COMPÉTENCES")
+        text _("")
+        text _("Tête : [tete]")
+        text _("Coeur : [coeur]")
+        text _("Épaules : [epaule]")
+
+    vbox :
+        text _("MAKAOKA")
+        xalign 0.5
+        yalign 0.05
+    vbox :
+        image _("images/makaoka_portrait.png")
+        xalign 0.5
+        yalign 0.3
+    vbox :
+        text _("ZÉMI")
+        xalign 0.5
+        yalign 0.76
+    vbox :
+        image _("images/zemi_profil.png")
+        xalign 0.5
+        yalign 0.92
+
+    vbox :
+        image _("images/profil.png")
+        xalign 0.993
+        yalign 0.06
+    vbox :
+        text _("ÉDUCATION DE RHANA")
+        xalign 0.8
+        yalign 0.085
+    vbox :
+        image _("images/zemi_profil.png")
+        xalign 0.9
+        yalign 0.5
+
+style profil_comp :
+    xalign 0.05
+    yalign 0.1
+    xsize None
+
+
 
 
 
