@@ -1263,7 +1263,6 @@ init python :
     yeduc = fy()
 
 screen profil :
-
     tag menu
     style_prefix "profil"
 
@@ -1346,24 +1345,23 @@ screen profil :
             xalign 0.99
             yalign 0.55
 
-        text _("[xeduc]"):
+        text _("[p_soutien]") :
+            xalign 0.1
+            yalign 0.1
+        text _("[p_controle]") :
+            xalign 0.1
+            yalign 0.2
+        text _("[xeduc]") :
             xalign 0.1
             yalign 0.3
-        text _("[yeduc]"):
+        text _("[yeduc]") :
             xalign 0.1
             yalign 0.4
-        text _("[p_soutien]"):
-            xalign 0.1
-            yalign 0.5
-        text _("[p_controle]"):
-            xalign 0.1
-            yalign 0.6
-
         frame :
             xsize 15
             ysize 15
-            xalign 0.7
-            yalign 0.3
+            xalign xeduc
+            yalign yeduc
 
 
 

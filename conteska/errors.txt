@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-The label p1 is defined twice, at
-  File "game/01.rpyc", line 27 and
-  File "game/jour.rpyc", line 27.
-
-The label p1 is defined twice, at
-  File "game/jour.rpyc", line 27 and
-  File "game/sb.rpy", line 27.
-
-The label p1 is defined twice, at
-  File "game/sb.rpy", line 27 and
-  File "game/scriptp1.rpyc", line 27.
+File "game/screens.rpy", line 1353: expected a keyword argument or end of line.
+    xalign = 0.2
+           ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Jun 06 13:16:36 2019
+Thu Jun 06 13:37:25 2019
