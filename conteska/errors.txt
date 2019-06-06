@@ -2,13 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scriptp1.rpy", line 8: expected '=' not found.
-    define xeduc as p_soutien()
-                 ^
-
-File "game/scriptp1.rpy", line 9: expected '=' not found.
-    define yeduc as p_controle()
-                 ^
+File "game/screens.rpy", line 1222: invalid syntax
+    import scriptp1.rpy store.educ as educ
+                             ^
+    
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Jun 05 16:00:54 2019
+Thu Jun 06 11:21:53 2019

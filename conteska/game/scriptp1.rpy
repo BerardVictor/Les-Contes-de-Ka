@@ -3,15 +3,32 @@ define r = Character('Rhana', color="#fefefe")
 
 default rel_Rhana = 0
 default rel_Lua = 0
-define p_soutien = 0
-define p_controle = 0
 
+
+init python in educ :
+    p_soutien = 0
+    p_controle = 0
+
+    def soutien() :
+        global p_soutien
+        return p_soutien
+
+    def controle() :
+        global p_controle
+        return p_controle
+
+init python :
+    import store.educ as educ
 
 default saoul = 0
 default faille1 = 0
 
 
 label p1 :
+
+    $ p_soutien = educ.p_soutien
+    $ p_controle = educ.p_controle
+
     scene bg_village
     "Vous vous réveillez en sursaut et en sueur. Vous êtes dans votre hamac, il fait nuit. Dehors, une pluie battante."
     "Un jeune garçon s'avance vers vous. Le voir vous met un peu mal à l'aise."

@@ -1218,26 +1218,52 @@ style help_label_text:
 ## Il n'est disponible qu'en jeu
 #default educ = "soutien: [p_soutien]""control: [p_controle]"
 
+init python :
+    import store.educ as educ
+
+define soutien = educ.soutien()
+define controle = educ.controle()
+
+
 
 init python :
-    def fxeduc(p_soutien):
-        xeduc = p_soutien / 10
-        if xeduc >= 10 :
-            xeduc = 10
-        elif xeduc <= -10 :
-            xeduc = -10
+    def fx():
+        if soutien == 0 :
+            xeduc = 0
+            return xeduc
+        else :
+            xeduc = float(soutien) / 10
+            if xeduc >= 10 :
+                xeduc = 10
+                return xeduc
+            elif xeduc <= -10 :
+                xeduc = -10
+                return xeduc
+            else :
+                return xeduc
 
-    def fyeduc(p_controle):
-        yeduc = p_controle / 10
-        if yeduc >= 10 :
-            yeduc = 10
-        elif yeduc <= -10 :
-            yeduc = -10
-    xeduc = fxeduc
-    yeduc = fyeduc
+    def fy():
+        if controle == 0 :
+            yeduc = 0
+            return yeduc
+        else :
+            yeduc = float(controle) / 10
+            if yeduc >= 10 :
+                yeduc = 10
+                return yeduc
+            elif yeduc <= -10 :
+                yeduc = -10
+                return yeduc
+            else :
+                return yeduc
 
+    fx()
+    fy()
+    xeduc = fx()
+    yeduc = fy()
 
 screen profil :
+
     tag menu
     style_prefix "profil"
 
@@ -1253,9 +1279,13 @@ screen profil :
         style "profil_comp"
         text _("COMPÉTENCES")
         text _("")
-        text _("Tête : [tete]")
-        text _("Coeur : [coeur]")
+        text _("")
         text _("Épaules : [epaule]")
+        text _("")
+        text _("Tête : [tete]")
+        text _("")
+        text _("Coeur : [coeur]")
+
 
     vbox :
         text _("MAKAOKA")

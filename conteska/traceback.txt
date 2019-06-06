@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 1222, in script
-    init python :
-  File "game/screens.rpy", line 1223, in <module>
-    def fxeduc(p_soutien):
-NameError: name 'fxeduc' is not defined
+  File "game/screens.rpy", line 1224, in script
+    define soutien = educ.soutien()
+  File "game/screens.rpy", line 1224, in <module>
+    define soutien = educ.soutien()
+AttributeError: 'StoreModule' object has no attribute 'soutien'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/screens.rpy", line 1222, in script
-    init python :
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 900, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1930, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/screens.rpy", line 1223, in <module>
-    def fxeduc(p_soutien):
-NameError: name 'fxeduc' is not defined
+  File "game/screens.rpy", line 1224, in script
+    define soutien = educ.soutien()
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 2029, in execute
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1954, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 1224, in <module>
+    define soutien = educ.soutien()
+AttributeError: 'StoreModule' object has no attribute 'soutien'
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
  
-Wed Jun 05 16:14:12 2019
+Thu Jun 06 11:34:01 2019
