@@ -1216,13 +1216,13 @@ style help_label_text:
 ## Cet écran fournit des informations sur les statistiques, l'humeur, le zémi de Makaoka
 ## Il affiche également l'éducation de Rhana
 ## Il n'est disponible qu'en jeu
+
 #default educ = "soutien: [p_soutien]""control: [p_controle]"
+#init python :
+#    import store.educ as educ
 
-init python :
-    import store.educ as educ
-
-define soutien = educ.soutien()
-define controle = educ.controle()
+define soutien = 2
+define controle = 4
 
 
 

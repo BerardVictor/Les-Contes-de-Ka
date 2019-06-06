@@ -23,4 +23,4 @@ AttributeError: 'StoreModule' object has no attribute 'soutien'
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
  
-Thu Jun 06 11:34:01 2019
+Thu Jun 06 13:15:31 2019

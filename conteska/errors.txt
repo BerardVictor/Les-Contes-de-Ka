@@ -2,10 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1222: invalid syntax
-    import scriptp1.rpy store.educ as educ
-                             ^
-    
+The label p1 is defined twice, at
+  File "game/01.rpyc", line 27 and
+  File "game/jour.rpyc", line 27.
+
+The label p1 is defined twice, at
+  File "game/jour.rpyc", line 27 and
+  File "game/sb.rpy", line 27.
+
+The label p1 is defined twice, at
+  File "game/sb.rpy", line 27 and
+  File "game/scriptp1.rpyc", line 27.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Jun 06 11:21:53 2019
+Thu Jun 06 13:16:36 2019
