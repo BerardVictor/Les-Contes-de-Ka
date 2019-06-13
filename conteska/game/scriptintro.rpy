@@ -28,7 +28,7 @@ label intro :
     "Sans chef, l'invasion ne pouvait plus progresser."
     "Notre histoire commence 12 ans plus tard. Vous êtes une des survivantes du massacre."
     "Vous êtes Makaoka. Vos dons vous ont permis de devenir une aikarin ; le village compte sur vous pour bannir les esprits corrompus."
-
+    $ persistent.wiki_unlocked.add("codex_makaoka")
 
 label metier :
     $ choice_menu = "tarot"

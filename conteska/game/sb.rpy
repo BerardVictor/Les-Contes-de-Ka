@@ -29,6 +29,7 @@ label p1 :
     $ p_soutien = educ.p_soutien
     $ p_controle = educ.p_controle
 
+    $ persistent.wiki_unlocked.add("codex_trigonolithes")
     scene bg_village
     "Vous vous réveillez en sursaut et en sueur. Vous êtes dans votre hamac, il fait nuit. Dehors, une pluie battante."
     "Un jeune garçon s'avance vers vous. Le voir vous met un peu mal à l'aise."

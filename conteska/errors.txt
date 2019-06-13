@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1353: expected a keyword argument or end of line.
-    xalign = 0.2
-           ^
+File "game/codex.rpy", line 88: expected a keyword argument, colon, or end of line.
+    imagebutton "images/back.png" action ShowMenu("codex_objet")
+                ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Jun 06 13:37:25 2019
+Thu Jun 13 10:22:56 2019

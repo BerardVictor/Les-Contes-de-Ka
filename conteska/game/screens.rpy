@@ -304,15 +304,16 @@ screen quick_menu():
             yalign 1.0
 
 #            textbutton _("Retour") action Rollback()
-            textbutton _("Historique") action ShowMenu('history')
+#            textbutton _("Historique") action ShowMenu('history')
 #            textbutton _("Avance rapide") action Skip() alternate Skip(fast=True, confirm=True)
 #            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Sauvegarde") action ShowMenu('save')
+#            textbutton _("Sauvegarde") action ShowMenu('save')
 #            textbutton _("Sauvegarde R.") action QuickSave()
 #            textbutton _("Chargement R.") action QuickLoad()
-            textbutton _("Paramètres") action ShowMenu('preferences')
-            textbutton _("          ")
-            textbutton _("Profil") action ShowMenu('profil')
+            textbutton _("Menu") action ShowMenu('preferences')
+#            textbutton _("          ")
+#            textbutton _("Profil") action ShowMenu('profil')
+#            textbutton _("Encyclopédie") action ShowMenu('codex')
 
 
 
@@ -532,6 +533,26 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         action Return()
     if not main_menu :
+        textbutton _("Paramètres"):
+            style "pref_button"
+            action ShowMenu('preferences')
+
+        textbutton _("Historique"):
+            style "histo_button"
+            action ShowMenu("history")
+
+        textbutton _("Sauvegarde"):
+            style "save_button"
+            action ShowMenu('save')
+
+        textbutton _("Profil"):
+            style "profil_button"
+            action ShowMenu('profil')
+
+        textbutton _("Encyclopédie"):
+            style "codex_button"
+            action ShowMenu('codex')
+
         textbutton _("Menu principal"):
             style "return_menu_button"
 
@@ -603,17 +624,47 @@ style return_button:
     xoffset -10
     yoffset 65
 
+style pref_button:
+    xalign 1.0
+    yalign 0
+    xoffset -10
+    yoffset 165
+
+style histo_button:
+    xalign 1.0
+    yalign 0
+    xoffset -10
+    yoffset 265
+
+style save_button:
+    xalign 1.0
+    yalign 0
+    xoffset -10
+    yoffset 365
+
+style profil_button:
+    xalign 1.0
+    yalign 0
+    xoffset -10
+    yoffset 465
+
+style codex_button:
+    xalign 1.0
+    yalign 0
+    xoffset -10
+    yoffset 565
+
 style return_menu_button:
     xalign 1.0
     yalign 0
     xoffset -10
-    yoffset 150
+    yoffset 665
 
 style quit_button :
     xalign 1.0
     yalign 0
     xoffset -10
-    yoffset 235
+    yoffset 765
 
 ## Écran « À propos... » #######################################################
 ##
@@ -1385,6 +1436,8 @@ style profil_comp :
     xalign 0.05
     yalign 0.1
     xsize None
+
+
 
 
 
