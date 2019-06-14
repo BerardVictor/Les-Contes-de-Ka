@@ -23,32 +23,35 @@ label combat01 :
     "Bref, une vraie saleté. La femme attaquée ne se laisse pas faire. Elle est blessée mais continue de se protéger avec une dague."
     scene bg_combat01
     with hpunch
-    menu :
-        "Attaquer l'aika" :
-            $ epaule += 2
-            $ lua_atk = True
-            "Vous vous jetez sur l'aika. Votre lance se plante dans ce qui lui sert de dos."
-            jump fin_combat01
 
-        "S'interposer" :
-            $ coeur += 2
-            $ lua_protected = True
-            "Vous sprintez et réussissez à parez le coup qui visait la jeune femme."
-            jump fin_combat01
+    call combat from _call_combat
 
-        "Rechercher une faille" :
-            $ tete += 3
-            $ coeur -= 1
-            $ lua_hit = True
-            "Vous gardez votre sang froid et recherchez une faille... Pendant ce temps, l'aika frappe la jeune femme, elle valdingue à quelques mètres."
-
-            if tete < 10 :
-                "Vous ne voyez rien de précis"
-                jump fin_combat01
-            else :
-                "Un morceau de poterie est exposé sous son flanc droit. Vous le fracassez avec le manche de votre arme. Le monstre vacille et vous en profitez pour le clouer de votre lance."
-                $ faille1 = 1
-                jump purge01
+#    menu :
+#        "Attaquer l'aika" :
+#            $ epaule += 2
+#            $ lua_atk = True
+#            "Vous vous jetez sur l'aika. Votre lance se plante dans ce qui lui sert de dos."
+#            jump fin_combat01
+#
+#        "S'interposer" :
+#            $ coeur += 2
+#            $ lua_protected = True
+#            "Vous sprintez et réussissez à parez le coup qui visait la jeune femme."
+#            jump fin_combat01
+#
+#        "Rechercher une faille" :
+#            $ tete += 3
+#            $ coeur -= 1
+#            $ lua_hit = True
+#            "Vous gardez votre sang froid et recherchez une faille... Pendant ce temps, l'aika frappe la jeune femme, elle valdingue à quelques mètres."
+#
+#            if tete < 10 :
+#                "Vous ne voyez rien de précis"
+#                jump fin_combat01
+#            else :
+#                "Un morceau de poterie est exposé sous son flanc droit. Vous le fracassez avec le manche de votre arme. Le monstre vacille et vous en profitez pour le clouer de votre lance."
+#                $ faille1 = 1
+#                jump purge01
 
 
 label fin_combat01 :

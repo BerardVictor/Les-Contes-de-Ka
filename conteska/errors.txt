@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/codex.rpy", line 88: expected a keyword argument, colon, or end of line.
-    imagebutton "images/back.png" action ShowMenu("codex_objet")
-                ^
+File "game/fight.rpy", line 72: screen expects a non-empty block.
+    screen fight :
+                  ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Jun 13 10:22:56 2019
+Fri Jun 14 18:02:41 2019
