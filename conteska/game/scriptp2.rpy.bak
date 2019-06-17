@@ -21,10 +21,11 @@ label combat01 :
     "En un éclair, vous êtes sur les lieux."
     "Un monstre aux formes indicibles menace une jeune femme. On dirait que les ténèbres elles-mêmes se sont accouplées avec un manicou, un poulpe et une poterie Arawak."
     "Bref, une vraie saleté. La femme attaquée ne se laisse pas faire. Elle est blessée mais continue de se protéger avec une dague."
-    scene bg_combat01
-    with hpunch
 
-    call combat
+    $ maka_hp = 10
+    $ aika_hp = 6
+
+    call combat 
 
 #    menu :
 #        "Attaquer l'aika" :

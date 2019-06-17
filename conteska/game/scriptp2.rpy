@@ -25,7 +25,7 @@ label combat01 :
     $ maka_hp = 10
     $ aika_hp = 6
 
-    call combat 
+    call combat from _call_combat 
 
 #    menu :
 #        "Attaquer l'aika" :
