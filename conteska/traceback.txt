@@ -1,36 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 415, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 415, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 434, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/fight.rpy", line 1, in script
+    image maka_hp = text("Makaoka HP : [maka_hp] / 10")
+  File "game/fight.rpy", line 1, in <module>
+    image maka_hp = text("Makaoka HP : [maka_hp] / 10")
+NameError: name 'text' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 415, in script
-    python hide:
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 900, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1930, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 415, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 434, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\loadsave.py", line 398, in save
-    roots = renpy.game.log.freeze(None)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1827, in freeze
-    self.complete(False)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1457, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/fight.rpy", line 1, in script
+    image maka_hp = text("Makaoka HP : [maka_hp] / 10")
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 999, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1954, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/fight.rpy", line 1, in <module>
+    image maka_hp = text("Makaoka HP : [maka_hp] / 10")
+NameError: name 'text' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
- 
-Fri Jun 14 17:44:18 2019
+Les Contes de Ka : l'Ére des Zémis Version 0.1
+Mon Jun 17 11:02:37 2019

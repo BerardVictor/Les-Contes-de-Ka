@@ -1,12 +1,37 @@
 label combat :
-    $ maka_hp = 10
-    $ aika_hp = 6
+
+
+    scene bg_menu
+    with hpunch
+
+    show battle_mkk :
+        xalign 0.05 yalign 0.3
+    with moveinleft
+
+    show battle_aika :
+        xalign 0.95 yalign 0.3
+    with moveinright
+
+
+
 
     $ aika_choice = renpy.random.choice(['Attaque', 'Esquive', 'Magie'])
 
     while maka_hp and aika_hp > 0 :
-        "Maka pv = [maka_hp]"
-        "Aika pv = [aika_hp]"
+
+        show text ("Makaoka HP : [maka_hp] / 10                                                                                                                     Aika HP : [aika_hp] / 6") :
+            xalign 0.4
+            yalign 0.08
+
+        if maka_hp <= 5 :
+            hide battle_mkk
+            show mkk_down :
+                xalign 0.05 yalign 0.3
+
+        if aika_hp <=3 :
+            hide battle_aika
+            show aika_down :
+                xalign 0.95 yalign 0.3
 
 #        init python :
 #            from random import randint
@@ -47,7 +72,7 @@ label combat :
                 "Makoka et l'aika se jaugent mutuellement."
 
             elif aika_choice == "Magie" :
-                "L'aika fait appel à son zemi ( / L'aika utilise sa magie) qui fait voler en éclat la protection de Makaoka ! (C'est très efficace !)"
+                "L'aika utilise sa magie Makaoka ne peut pas esquiver et se prend l'attaque de plein fouet ! (C'est très efficace !)"
                 $aika_hp -= 2
 
         elif maka_choice == "Magie" :
@@ -56,7 +81,7 @@ label combat :
                 $maka_hp -= 2
 
             elif aika_choice == "Esquive" :
-                "Makoka fait appel à son zemi ( / L'aika utilise sa magie) qui fait voler en éclat la protection de l'aika ! (C'est très efficace !)"
+                "Makoka fait appel à son zemi qui fait voler en éclat la protection de l'aika ! (C'est très efficace !)"
                 $aika_hp -= 2
 
             elif aika_choice == "Magie" :
@@ -67,6 +92,4 @@ label combat :
     if maka_hp == 0 :
         "Vous avez perdu"
     elif aika_hp == 0 :
-        "Vous avez gagner"
-
-#screen fight :
+        "Vous avez gagné"

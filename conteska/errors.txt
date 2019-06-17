@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/fight.rpy", line 72: screen expects a non-empty block.
-    screen fight :
-                  ^
+File "game/fight.rpy", line 28: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Fri Jun 14 18:02:41 2019
+Mon Jun 17 11:26:58 2019

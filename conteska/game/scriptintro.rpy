@@ -16,16 +16,9 @@ default paix = 0
 label start :
     $ renpy.movie_cutscene("movie/intro.webm")
     scene bg_bassin
-    play music "audio/main_menu_theme.ogg"
+    play music "audio/ig_theme.ogg"
 
 label intro :
-    "Je vais vous raconter la catastrophe d’une autre époque. Dans un archipel que vous appelez les Antilles vivaient des tribus Arawak."
-    "Ces peuples prospéraient, en harmonie avec la nature. Ils ne fabriquaient presque jamais d’armes mais imprégnaient leur art de puissantes magies."
-    "Mais un jour -les jours funestes ne préviennent jamais- Kamanushi : le chef des sanguinaires guerriers Karibs tomba sur l’île de Kariani tel un sombre météore."
-    "Tempête de flammes, destruction, malédiction et mort ! Le bruit des combats remplaça celui des vagues et l’odeur du sang couvrit le parfum des campêches."
-    "Kamanushi ignorait quelque chose… Toutes les émotions qu’il avait déchaînées : la haine, la peur, la colère renforçaient les aikas, de farouches esprits !"
-    "D’après vous ? Que s’est-il passé ? Ces esprits funestes tuèrent beaucoup de Karibs… Et Kamanushi fut leur première victime !"
-    "Sans chef, l'invasion ne pouvait plus progresser."
     "Notre histoire commence 12 ans plus tard. Vous êtes une des survivantes du massacre."
     "Vous êtes Makaoka. Vos dons vous ont permis de devenir une aikarin ; le village compte sur vous pour bannir les esprits corrompus."
     $ persistent.wiki_unlocked.add("codex_makaoka")
@@ -49,17 +42,17 @@ label metier :
 
 label chasseuse :
     "Mmmh... Chasseuse, une profession qui demande de la force et de l'endurance."
-    "Vous avez gagner +5 en Épaule. Épaule est passer à [epaule]."
+    "Vous avez gagné +5 en Épaule. Épaule est passé à [epaule]."
     jump fuite
 
 label artisane :
     "Mmmh... Artisane, une profession qui demande un esprit vif et des mains agiles."
-    "Vous avez gagner +5 en Tête. Tête est passer à [tete]."
+    "Vous avez gagné +5 en Tête. Tête est passé à [tete]."
     jump fuite
 
 label chamane :
     "Mmmh... Chamane, une profession qui demande une grande connexion avec les esprits."
-    "Vous avez gagner +5 en Coeur. Coeur est passer à [coeur]."
+    "Vous avez gagné +5 en Coeur. Coeur est passé à [coeur]."
     jump fuite
 
 
@@ -81,17 +74,17 @@ label fuite :
 
 label force :
     "Ah oui, elle avait brisé ses liens... Et la tête de ceux qui se mettaient sur son chemin."
-    "Vous avez gagner +5 en Épaule. Épaule est passer à [epaule]."
+    "Vous avez gagné +5 en Épaule. Épaule est passé à [epaule]."
     jump enfance
 
 label ruse :
     "Ah oui, elle avait fabriqué un leurre avec ce qu'elle avait sous la main."
-    "Vous avez gagner +5 en Tête. Tête est passer à [tete]."
+    "Vous avez gagné +5 en Tête. Tête est passé à [tete]."
     jump enfance
 
 label charisme :
     " Ah oui, elle avait convaincu un des Karibs de la libérer."
-    "Vous avez gagner +5 en Coeur. Coeur est passer à [coeur]."
+    "Vous avez gagné +5 en Coeur. Coeur est passé à [coeur]."
     jump enfance
 
 
@@ -113,19 +106,19 @@ label enfance :
 
 label montagne :
     "Montagnes. Typique des gens indomptables..."
-    "Vous avez gagner +5 en Épaule. Épaule est passer à [epaule]."
+    "Vous avez gagné +5 en Épaule. Épaule est passé à [epaule]."
     jump pret
 
 
 label foret :
     "Forêts. Typique des gens qui aiment réfléchir..."
-    "Vous avez gagner +5 en Tête. Tête est passer à [tete]."
+    "Vous avez gagné +5 en Tête. Tête est passé à [tete]."
     jump pret
 
 
 label caverne :
     "Cavernes. Typique des personnes spirituelles..."
-    "Vous avez gagner +5 en Coeur. Coeur est passer à [coeur]."
+    "Vous avez gagné +5 en Coeur. Coeur est passé à [coeur]."
     jump pret
 
 #style choice_button is button
