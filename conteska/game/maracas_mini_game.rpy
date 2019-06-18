@@ -75,9 +75,8 @@ label maracas_mini_game :
             yalign 0.15
             size 80
 
-        imagebutton :
-            idle "images/maracas.png"
-            hover "images/maracas_click.png"
+        image "images/maracas.png" :
+#            hover "images/maracas_click.png"
             xalign 0.5
             yalign 0.5
 
@@ -98,6 +97,11 @@ label maracas_mini_game :
             renpy.show_screen("show_vars")
             renpy.show("_", what=manager, zorder=1)
 
+        if hits >= 5 :
+            jump purge02
+
+        if misses >= 5 :
+            jump maracas_mini_game
 
         while True:
             $ result = ui.interact()

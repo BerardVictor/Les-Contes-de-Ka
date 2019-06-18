@@ -3,59 +3,26 @@
 While running game code:
   File "game/scriptp2.rpy", line 72, in script call
     call maracas_mini_game
-  File "game/maracas_mini_game.rpy", line 102, in script
-    $ result = ui.interact()
-  File "game/maracas_mini_game.rpy", line 102, in <module>
-    $ result = ui.interact()
-TypeError: 'int' object is not iterable
+  File "game/maracas_mini_game.rpy", line 101, in script
+    if hits = 5 :
+SyntaxError: invalid syntax (game/maracas_mini_game.rpy, line 101)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/scriptp2.rpy", line 72, in script call
     call maracas_mini_game
-  File "game/maracas_mini_game.rpy", line 102, in script
-    $ result = ui.interact()
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 900, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1930, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/maracas_mini_game.rpy", line 102, in <module>
-    $ result = ui.interact()
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 2690, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 3174, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\core.py", line 2086, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 516, in renpy.display.render.render_screen
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\screen.py", line 669, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "accelerator.pyx", line 108, in renpy.display.accelerator.transform_render
-TypeError: 'int' object is not iterable
+  File "game/maracas_mini_game.rpy", line 101, in script
+    if hits = 5 :
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 1807, in execute
+    if renpy.python.py_eval(condition):
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1959, in py_eval
+    code = py_compile(code, 'eval')
+  File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 690, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/maracas_mini_game.rpy, line 101)
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
 Les Contes de Ka : l'Ére des Zémis Version 0.1
-Tue Jun 18 11:25:26 2019
+Tue Jun 18 16:27:31 2019

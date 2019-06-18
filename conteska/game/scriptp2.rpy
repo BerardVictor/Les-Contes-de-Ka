@@ -71,6 +71,8 @@ label purge01 :
 
     call maracas_mini_game
 
+
+label purge02 :
     menu :
         "Vous posez votre paume sur son front. Le tatouage caractéristique des aikarins sur le dos de votre main se met à tournoyer."
         "Continuer de jouer du maraca" :

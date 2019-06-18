@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/maracas_mini_game.rpy", line 65: expected a keyword argument, colon, or end of line.
-    imagebutton "maracas_zone.png" :
-                ^
+File "game/maracas_mini_game.rpy", line 80: Line is indented, but the preceding image statement does not expect a block. Please check this line's indentation.
+    xalign 0.5
+    ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Jun 18 14:48:12 2019
+Tue Jun 18 16:30:44 2019
