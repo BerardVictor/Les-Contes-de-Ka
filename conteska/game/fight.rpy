@@ -1,5 +1,6 @@
 label combat :
 
+    
 
     scene bg_menu
     with hpunch
@@ -22,13 +23,28 @@ label combat :
         show text ("Makaoka HP : [maka_hp] / 10                                                                                                                     Aika HP : [aika_hp] / 6") :
             xalign 0.4
             yalign 0.08
+        with dissolve
 
         if maka_hp <= 5 :
+            show text "Makaoka faiblit sous les coups de l'aika" :
+                xalign 0.075
+                yalign 0.2
+            with dissolve
+            pause 1
+            hide text
+            with dissolve
             hide battle_mkk
             show mkk_down :
                 xalign 0.05 yalign 0.3
 
+
         if aika_hp <=3 :
+            show text "L'aika faiblit sous les coups de Makaoka" :
+                xalign 0.925
+                yalign 0.2
+            with dissolve
+            pause 1
+            hide text
             hide battle_aika
             show aika_down :
                 xalign 0.95 yalign 0.3
@@ -54,35 +70,59 @@ label combat :
                 "Ils se jettent l'un sur l'autre et se blessent tous deux dans l'attaque."
                 $maka_hp -= 1
                 $aika_hp -= 1
+                show battle_mkk :
+                    xalign 0.05 yalign 0.3
+                with hpunch
+                show battle_aika :
+                    xalign 0.95 yalign 0.3
+                with hpunch
 
             elif aika_choice == "Esquive" :
                 "L'aika esquive l'attaque de justesse et décoche un contre dévastateur ! (C'est très efficace !)"
                 $maka_hp -= 2
+                show battle_mkk :
+                    xalign 0.05 yalign 0.3
+                with hpunch
 
             elif aika_choice == "Magie" :
                 "Makaoka lance une série d'attaques ! L'aika subit de terribles entailles alors qu'il essayait de concentrer sa magie. (C'est très efficace !)"
                 $aika_hp -= 2
+                show battle_aika :
+                    xalign 0.95 yalign 0.3
+                with hpunch
 
         elif maka_choice == "Esquive" :
             if aika_choice == "Attaque" :
                 "Makoka esquive l'attaque de justesse et décoche un contre dévastateur ! (C'est très efficace !)"
                 $aika_hp -= 2
+                show battle_aika :
+                    xalign 0.95 yalign 0.3
+                with hpunch
 
             elif aika_choice == "Esquive" :
                 "Makoka et l'aika se jaugent mutuellement."
 
             elif aika_choice == "Magie" :
                 "L'aika utilise sa magie Makaoka ne peut pas esquiver et se prend l'attaque de plein fouet ! (C'est très efficace !)"
-                $aika_hp -= 2
+                $maka_hp -= 2
+                show battle_mkk :
+                    xalign 0.05 yalign 0.3
+                with hpunch
 
         elif maka_choice == "Magie" :
             if aika_choice == "Attaque" :
                 "L'aika lance une série d'attaques ! Makaoka subit de terribles entailles alors qu'elle essayait de concentrer sa magie. (C'est très efficace !)"
                 $maka_hp -= 2
+                show battle_mkk :
+                    xalign 0.05 yalign 0.3
+                with hpunch
 
             elif aika_choice == "Esquive" :
                 "Makoka fait appel à son zemi qui fait voler en éclat la protection de l'aika ! (C'est très efficace !)"
                 $aika_hp -= 2
+                show battle_aika :
+                    xalign 0.95 yalign 0.3
+                with hpunch
 
             elif aika_choice == "Magie" :
                 "Les deux ondes s'entrechoquent et font exploser les poteries de la pièce."
@@ -93,3 +133,5 @@ label combat :
         "Vous avez perdu"
     elif aika_hp == 0 :
         "Vous avez gagné"
+
+    play music "audio/ig_theme.ogg"

@@ -25,7 +25,8 @@ label combat01 :
     $ maka_hp = 10
     $ aika_hp = 6
 
-    call combat from _call_combat 
+    play music "audio/fight_theme.ogg"
+    call combat
 
 #    menu :
 #        "Attaquer l'aika" :
@@ -67,6 +68,9 @@ label purge01 :
         "Demander le maraca" :
             m "Rhana ! Envoie-moi Kaskabel !\", demandez-vous avec un ton pressé (l'aika essaye de se dégager)."
             "Rhana vous lance un maraca. Vous le saisissez et le secouez en rythme, autour du monstre. Il réagit. Il s'agite de plus bel puis se calme. On n'entend plus que le sable du maraca."
+
+    call maracas_mini_game
+
     menu :
         "Vous posez votre paume sur son front. Le tatouage caractéristique des aikarins sur le dos de votre main se met à tournoyer."
         "Continuer de jouer du maraca" :
@@ -75,6 +79,7 @@ label purge01 :
             jump renc_lua
 
 label renc_lua :
+    play music "audio/ig_theme.ogg"
     show makaoka :
         xalign 0.0 yalign 0.425
     with moveinleft
