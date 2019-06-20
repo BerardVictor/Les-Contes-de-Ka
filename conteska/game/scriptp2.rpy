@@ -26,7 +26,7 @@ label combat01 :
     $ aika_hp = 6
 
     play music "audio/fight_theme.ogg"
-    call combat
+    call combat from _call_combat
 
 #    menu :
 #        "Attaquer l'aika" :
