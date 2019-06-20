@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/maracas_mini_game.rpy", line 80: Line is indented, but the preceding image statement does not expect a block. Please check this line's indentation.
-    xalign 0.5
-    ^
+File "game/maracas_mini_game.rpy", line 88: expected a keyword argument or end of line.
+    idle_foreground text "{size=20}{font=Eraser.ttf}Begin{/font}{/size}"  
+                         ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Jun 18 16:30:44 2019
+Wed Jun 19 13:43:38 2019

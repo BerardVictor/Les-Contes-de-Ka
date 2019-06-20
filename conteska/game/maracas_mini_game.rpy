@@ -1,5 +1,5 @@
 label maracas_mini_game :
-    play music "audio/maracas_theme.ogg"
+#    play music "audio/maracas_theme.ogg"
     init python:
         import time
         import pygame
@@ -36,6 +36,8 @@ label maracas_mini_game :
             def y(self, value):
                 self.show.y = value
 
+
+
         def sprites_update(st):
             for sprite in sprites[:]:
                 sprite.update()
@@ -60,6 +62,11 @@ label maracas_mini_game :
                     if not hit:
                         store.misses += 1
                     renpy.restart_interaction()
+#                    if hits == 5 :
+#                        renpy.call(purge02)
+#
+#                    if misses == 5 :
+#                        renpy.call(maracas_mini_game)
 
     screen show_vars:
         image "images/maracas_zone.png" :
@@ -75,10 +82,15 @@ label maracas_mini_game :
             yalign 0.15
             size 80
 
-        image "images/maracas.png" :
-#            hover "images/maracas_click.png"
+        imagebutton :
+            idle "images/maracas.png"
+            hover "images/maracas_click.png"
+            idle_foreground Text("{size=20}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
+            hover_foreground Text("{size=28}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
+            action renpy.sound.play ("audio/maracas_hit.ogg")
             xalign 0.5
             yalign 0.5
+
 
     label maracas_start:
         python:
@@ -97,11 +109,7 @@ label maracas_mini_game :
             renpy.show_screen("show_vars")
             renpy.show("_", what=manager, zorder=1)
 
-        if hits >= 5 :
-            jump purge02
 
-        if misses >= 5 :
-            jump maracas_mini_game
 
         while True:
             $ result = ui.interact()

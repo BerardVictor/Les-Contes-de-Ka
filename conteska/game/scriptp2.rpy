@@ -69,7 +69,7 @@ label purge01 :
             m "Rhana ! Envoie-moi Kaskabel !\", demandez-vous avec un ton pressé (l'aika essaye de se dégager)."
             "Rhana vous lance un maraca. Vous le saisissez et le secouez en rythme, autour du monstre. Il réagit. Il s'agite de plus bel puis se calme. On n'entend plus que le sable du maraca."
 
-    call maracas_mini_game
+    jump maracas_mini_game
 
 
 label purge02 :
