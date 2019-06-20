@@ -64,7 +64,6 @@ label maracas_mini_game :
                     renpy.restart_interaction()
 #                    if hits == 5 :
 #                        renpy.call(purge02)
-#
 #                    if misses == 5 :
 #                        renpy.call(maracas_mini_game)
 
@@ -85,8 +84,8 @@ label maracas_mini_game :
         imagebutton :
             idle "images/maracas.png"
             hover "images/maracas_click.png"
-            idle_foreground Text("{size=20}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
-            hover_foreground Text("{size=28}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
+#            idle_foreground Text("{size=20}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
+#            hover_foreground Text("{size=28}{font=Eraser.ttf}Appuyez{/font}{/size}" , xalign=0.5, yalign=0.5)
             action renpy.sound.play ("audio/maracas_hit.ogg")
             xalign 0.5
             yalign 0.5

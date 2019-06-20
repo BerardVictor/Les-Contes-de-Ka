@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scriptp2.rpy", line 188, in script
+  File "game/maracas_mini_game.rpy", line 114, in script
     $ result = ui.interact()
-  File "game/scriptp2.rpy", line 188, in <module>
+  File "game/maracas_mini_game.rpy", line 114, in <module>
     $ result = ui.interact()
-  File "game/scriptp2.rpy", line 142, in sprites_event
-    renpy.jump(maracas_mini_game)
+  File "game/maracas_mini_game.rpy", line 68, in sprites_event
+    renpy.call(maracas_mini_game)
 NameError: global name 'maracas_mini_game' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scriptp2.rpy", line 188, in script
+  File "game/maracas_mini_game.rpy", line 114, in script
     $ result = ui.interact()
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/scriptp2.rpy", line 188, in <module>
+  File "game/maracas_mini_game.rpy", line 114, in <module>
     $ result = ui.interact()
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\ui.py", line 289, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
@@ -36,11 +36,11 @@ Full traceback:
     rv = d.event(ev, cx, cy, st)
   File "D:\Renpy\renpy-7.2.2-sdk\renpy\display\particle.py", line 312, in event
     return self.event_function(ev, x, y, st)
-  File "game/scriptp2.rpy", line 142, in sprites_event
-    renpy.jump(maracas_mini_game)
+  File "game/maracas_mini_game.rpy", line 68, in sprites_event
+    renpy.call(maracas_mini_game)
 NameError: global name 'maracas_mini_game' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.2.2.491
 Les Contes de Ka : l'Ére des Zémis Version 0.1
-Thu Jun 20 08:33:55 2019
+Thu Jun 20 09:01:12 2019
