@@ -310,7 +310,7 @@ screen quick_menu():
 #            textbutton _("Sauvegarde") action ShowMenu('save')
 #            textbutton _("Sauvegarde R.") action QuickSave()
 #            textbutton _("Chargement R.") action QuickLoad()
-            textbutton _("Menu") action ShowMenu('preferences')
+            textbutton _("Menu") action ShowMenu('ig_menu')
 #            textbutton _("          ")
 #            textbutton _("Profil") action ShowMenu('profil')
 #            textbutton _("Encyclopédie") action ShowMenu('codex')
@@ -665,6 +665,41 @@ style quit_button :
     yalign 0
     xoffset -10
     yoffset 765
+
+
+#########################################
+##Écran de navigation IG simplifié#######
+#########################################
+screen ig_menu :
+
+    image "images/bg_ig_menu.png" :
+        xalign 0.5
+        yalign 0.5
+    textbutton _("Retour"):
+        xalign 0.5
+        yalign 0.35
+
+        action Return()
+
+    textbutton _("Paramètres"):
+        xalign 0.5
+        yalign 0.45
+        action ShowMenu('preferences')
+
+    textbutton _("Menu principal"):
+        xalign 0.5
+        yalign 0.55
+
+        action MainMenu()
+
+    textbutton _("Quitter le jeu"):
+        xalign 0.5
+        yalign 0.65
+
+        action Quit(confirm=not main_menu)
+
+
+#########################################
 
 ## Écran « À propos... » #######################################################
 ##
@@ -1272,8 +1307,8 @@ style help_label_text:
 #init python :
 #    import store.educ as educ
 
-define soutien = 2
-define controle = 4
+define soutien = 20
+define controle = 14
 
 
 
@@ -1284,11 +1319,11 @@ init python :
             return xeduc
         else :
             xeduc = float(soutien) / 10
-            if xeduc >= 10 :
-                xeduc = 10
+            if xeduc >= 1.0 :
+                xeduc = 1.0
                 return xeduc
-            elif xeduc <= -10 :
-                xeduc = -10
+            elif xeduc <= -1.0 :
+                xeduc = -1.0
                 return xeduc
             else :
                 return xeduc
@@ -1299,11 +1334,11 @@ init python :
             return yeduc
         else :
             yeduc = float(controle) / 10
-            if yeduc >= 10 :
-                yeduc = 10
+            if yeduc >= 1.0 :
+                yeduc = 1.0
                 return yeduc
-            elif yeduc <= -10 :
-                yeduc = -10
+            elif yeduc <= -1.0 :
+                yeduc = -1.0
                 return yeduc
             else :
                 return yeduc
@@ -1396,10 +1431,10 @@ screen profil :
             xalign 0.99
             yalign 0.55
 
-        text _("[p_soutien]") :
+        text _("[soutien]") :
             xalign 0.1
             yalign 0.1
-        text _("[p_controle]") :
+        text _("[controle]") :
             xalign 0.1
             yalign 0.2
         text _("[xeduc]") :

@@ -62,10 +62,10 @@ label maracas_mini_game :
                     if not hit:
                         store.misses += 1
                     renpy.restart_interaction()
-#                    if hits == 5 :
-#                        renpy.call(purge02)
-#                    if misses == 5 :
-#                        renpy.call(maracas_mini_game)
+                    if hits == 5 :
+                        renpy.jump("purge02")
+                    if misses == 5 :
+                        renpy.jump("maracas_mini_game")
 
     screen show_vars:
         image "images/maracas_zone.png" :
