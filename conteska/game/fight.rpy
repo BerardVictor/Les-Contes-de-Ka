@@ -1,6 +1,6 @@
 label combat :
 
-    
+
 
     scene bg_menu
     with hpunch
@@ -12,8 +12,6 @@ label combat :
     show battle_aika :
         xalign 0.95 yalign 0.3
     with moveinright
-
-
 
 
     $ aika_choice = renpy.random.choice(['Attaque', 'Esquive', 'Magie'])
@@ -131,6 +129,7 @@ label combat :
 
     if maka_hp == 0 :
         "Vous avez perdu"
+        jump combat
     elif aika_hp == 0 :
         "Vous avez gagné"
 
