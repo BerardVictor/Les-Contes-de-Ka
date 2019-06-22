@@ -1,7 +1,4 @@
 label combat :
-
-
-
     scene bg_menu
     with hpunch
 

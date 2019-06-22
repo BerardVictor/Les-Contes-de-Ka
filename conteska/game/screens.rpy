@@ -541,29 +541,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
             style "histo_button"
             action ShowMenu("history")
 
-        textbutton _("Sauvegarde"):
-            style "save_button"
-            action ShowMenu('save')
-
-        textbutton _("Profil"):
-            style "profil_button"
-            action ShowMenu('profil')
-
-        textbutton _("Encyclopédie"):
-            style "codex_button"
-            action ShowMenu('codex')
-
-        textbutton _("Menu principal"):
-            style "return_menu_button"
-
-            action MainMenu()
-
-        textbutton _("Quitter le jeu"):
-            style "quit_button"
-
-            action Quit(confirm=not main_menu)
-
-
     label title
 
     if main_menu:
@@ -677,24 +654,39 @@ screen ig_menu :
         yalign 0.5
     textbutton _("Retour"):
         xalign 0.5
-        yalign 0.35
+        yalign 0.20
 
         action Return()
 
     textbutton _("Paramètres"):
         xalign 0.5
-        yalign 0.45
+        yalign 0.30
         action ShowMenu('preferences')
+
+    textbutton _("Profil"):
+        xalign 0.5
+        yalign 0.40
+        action ShowMenu('profil')
+
+    textbutton _("Encyclopédie"):
+        xalign 0.5
+        yalign 0.50
+        action ShowMenu('codex')
+
+    textbutton _("Sauvegardes"):
+        xalign 0.5
+        yalign 0.60
+        action ShowMenu('save')
 
     textbutton _("Menu principal"):
         xalign 0.5
-        yalign 0.55
+        yalign 0.70
 
         action MainMenu()
 
     textbutton _("Quitter le jeu"):
         xalign 0.5
-        yalign 0.65
+        yalign 0.80
 
         action Quit(confirm=not main_menu)
 
@@ -1431,18 +1423,6 @@ screen profil :
             xalign 0.99
             yalign 0.55
 
-        text _("[soutien]") :
-            xalign 0.1
-            yalign 0.1
-        text _("[controle]") :
-            xalign 0.1
-            yalign 0.2
-        text _("[xeduc]") :
-            xalign 0.1
-            yalign 0.3
-        text _("[yeduc]") :
-            xalign 0.1
-            yalign 0.4
         frame :
             xsize 15
             ysize 15
