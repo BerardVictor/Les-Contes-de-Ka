@@ -1299,8 +1299,8 @@ style help_label_text:
 #init python :
 #    import store.educ as educ
 
-define soutien = 20
-define controle = 14
+define soutien = 8
+define controle = 4
 
 
 

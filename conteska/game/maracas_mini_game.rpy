@@ -104,6 +104,8 @@ label maracas_mini_game :
             for i in xrange(100):
                 td += renpy.random.random() + 0.5
                 sprites.append(RhythmD(Image("images/maracas_hit.png"), 10, td, 75))
+                if i == 100 :
+                    renpy.jump("maracas_mini_game")
 
             renpy.show_screen("show_vars")
             renpy.show("_", what=manager, zorder=1)
